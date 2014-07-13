@@ -11,8 +11,14 @@ import UIKit
 struct Animation {
     var duration:NSTimeInterval = 0.5
     var delay:NSTimeInterval = 0
-    var damping:CGFloat = 0.4
-    var velocity:CGFloat = 0.3
+    var damping:CGFloat = 0.6
+    var velocity:CGFloat = 0.9
+}
+
+enum Direction {
+    case TopToBottom
+    case LeftToRight
+    case RightToLeft
 }
 
 protocol SFSwiftNotificationProtocol {
@@ -25,12 +31,14 @@ class SFSwiftNotification: UIView {
     var delegate: SFSwiftNotificationProtocol?
     var animation = Animation()
     var canNotify = true
+    var offScreenFrame = CGRect()
+    var direction:Direction?
     
-    init(frame: CGRect, title: NSString?, delegate: SFSwiftNotificationProtocol?) {
+    init(frame: CGRect, title: NSString?, direction:Direction, delegate: SFSwiftNotificationProtocol?) {
         super.init(frame: frame)
         
         self.delegate = delegate
-        
+        self.direction = direction
         label = UILabel(frame: self.frame)
         label.text = title
         label.textAlignment = NSTextAlignment.Center
@@ -41,8 +49,17 @@ class SFSwiftNotification: UIView {
     
     func offScreen() {
         
-        var offScreenFrame = self.frame
-        offScreenFrame.origin.y = -self.frame.size.height
+        self.offScreenFrame = self.frame
+        
+        switch direction! {
+        case .TopToBottom:
+            self.offScreenFrame.origin.y = -self.frame.size.height
+        case .LeftToRight:
+            self.offScreenFrame.origin.x = -self.frame.size.width
+        case .RightToLeft:
+            self.offScreenFrame.origin.x = +self.frame.size.width
+        }
+        
         self.frame = offScreenFrame
     }
     
@@ -73,9 +90,7 @@ class SFSwiftNotification: UIView {
             initialSpringVelocity: animation.velocity,
             options: (.BeginFromCurrentState | .AllowUserInteraction),
             animations:{
-                var hideFrame = toFrame
-                hideFrame.origin.y = toFrame.origin.y-self.frame.size.height
-                self.frame = hideFrame
+                self.frame = self.offScreenFrame
             }, completion: {
                 (value: Bool) in
                 self.delegate!.didNotifyFinishedAnimation(true)

@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, SFSwiftNotificationProtocol {
     
-    let notifyViewHeight:CGFloat = 50
     var notifyFrame:CGRect?
     var notifyView:SFSwiftNotification?
     
@@ -18,8 +17,11 @@ class ViewController: UIViewController, SFSwiftNotificationProtocol {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        notifyFrame = CGRectMake(0, 0, CGRectGetMaxX(self.view.frame), notifyViewHeight)
-        notifyView = SFSwiftNotification(frame: notifyFrame!, title: nil, delegate: self)
+        notifyFrame = CGRectMake(0, 0, CGRectGetMaxX(self.view.frame), 50)
+        notifyView = SFSwiftNotification(frame: notifyFrame!,
+                                         title: nil,
+                                     direction: Direction.LeftToRight,
+                                      delegate: self)
         notifyView!.backgroundColor = UIColor.orangeColor()
         notifyView!.label.textColor = UIColor.whiteColor()
         notifyView!.label.text = "This is an SFSwiftNotification"
@@ -29,7 +31,6 @@ class ViewController: UIViewController, SFSwiftNotificationProtocol {
     @IBAction func notify(sender : AnyObject) {
         
         var notifyToFrame:CGRect = notifyFrame!
-        notifyToFrame.origin.y = 0
         self.notifyView!.animate(notifyToFrame, delay: 1)
     }
     
