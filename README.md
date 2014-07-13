@@ -22,13 +22,13 @@ Usage
 
 In your ViewController
 
-``` 
+```swift
 	var notifyView:SFSwiftNotification?
 ```
 
 In ```viewDidLoad()```
 
-``` 
+```swift
     notifyView = SFSwiftNotification(frame: frame,
                                      title: nil,
                                  direction: Direction.LeftToRight,
@@ -41,7 +41,7 @@ In ```viewDidLoad()```
 
 To start the notification:
 
-```
+```swift
     @IBAction func notify(sender : AnyObject) {
         
         self.notifyView!.animate(newFrame, delay: 1)
