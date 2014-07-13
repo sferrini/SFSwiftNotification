@@ -55,16 +55,16 @@ Settings
 AnimationTypes:
 
 ```swift
-    AnimationTypeCollision
-    AnimationTypeBounce
+    .AnimationTypeCollision
+    .AnimationTypeBounce
 ```
 
-Direction:
+Directions:
 
 ```swift
-    TopToBottom
-    LeftToRight
-    RightToLeft
+    .TopToBottom
+    .LeftToRight
+    .RightToLeft
 ```
 
 Screen
