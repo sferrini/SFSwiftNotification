@@ -20,6 +20,7 @@ class ViewController: UIViewController, SFSwiftNotificationProtocol {
         notifyFrame = CGRectMake(0, 0, CGRectGetMaxX(self.view.frame), 50)
         notifyView = SFSwiftNotification(frame: notifyFrame!,
                                          title: nil,
+                                 animationType: AnimationType.AnimationTypeCollision,
                                      direction: Direction.LeftToRight,
                                       delegate: self)
         notifyView!.backgroundColor = UIColor.orangeColor()
@@ -30,8 +31,7 @@ class ViewController: UIViewController, SFSwiftNotificationProtocol {
     
     @IBAction func notify(sender : AnyObject) {
         
-        var notifyToFrame:CGRect = notifyFrame!
-        self.notifyView!.animate(notifyToFrame, delay: 1)
+        self.notifyView!.animate(notifyFrame!, delay: 1)
     }
     
     func didNotifyFinishedAnimation(results: Bool) {
