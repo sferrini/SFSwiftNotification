@@ -12,6 +12,7 @@
 		FC2601B81972D15200301002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2601B61972D15200301002 /* Main.storyboard */; };
 		FC2601BA1972D15200301002 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2601B91972D15200301002 /* Images.xcassets */; };
 		FC2601C61972D15300301002 /* SFSwiftNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2601C51972D15300301002 /* SFSwiftNotificationTests.swift */; };
+		FC2601D31972D26500301002 /* SFSwiftNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2601D21972D26500301002 /* SFSwiftNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		FC2601BF1972D15300301002 /* SFSwiftNotificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFSwiftNotificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2601C41972D15300301002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2601C51972D15300301002 /* SFSwiftNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSwiftNotificationTests.swift; sourceTree = "<group>"; };
+		FC2601D21972D26500301002 /* SFSwiftNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSwiftNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		FC2601AF1972D15200301002 /* SFSwiftNotification */ = {
 			isa = PBXGroup;
 			children = (
+				FC2601D11972D25000301002 /* Classes */,
 				FC2601B21972D15200301002 /* AppDelegate.swift */,
 				FC2601B41972D15200301002 /* ViewController.swift */,
 				FC2601B61972D15200301002 /* Main.storyboard */,
@@ -108,6 +111,14 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		FC2601D11972D25000301002 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FC2601D21972D26500301002 /* SFSwiftNotification.swift */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -210,6 +221,7 @@
 			files = (
 				FC2601B51972D15200301002 /* ViewController.swift in Sources */,
 				FC2601B31972D15200301002 /* AppDelegate.swift in Sources */,
+				FC2601D31972D26500301002 /* SFSwiftNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
