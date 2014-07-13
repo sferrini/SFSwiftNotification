@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC2601B31972D15200301002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2601B21972D15200301002 /* AppDelegate.swift */; };
+		FC2601B51972D15200301002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2601B41972D15200301002 /* ViewController.swift */; };
+		FC2601B81972D15200301002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2601B61972D15200301002 /* Main.storyboard */; };
+		FC2601BA1972D15200301002 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2601B91972D15200301002 /* Images.xcassets */; };
+		FC2601C61972D15300301002 /* SFSwiftNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2601C51972D15300301002 /* SFSwiftNotificationTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC2601C01972D15300301002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC2601A51972D15200301002 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC2601AC1972D15200301002;
+			remoteInfo = SFSwiftNotification;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC2601AD1972D15200301002 /* SFSwiftNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSwiftNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2601B11972D15200301002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2601B21972D15200301002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC2601B41972D15200301002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC2601B71972D15200301002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC2601B91972D15200301002 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FC2601BF1972D15300301002 /* SFSwiftNotificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFSwiftNotificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2601C41972D15300301002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2601C51972D15300301002 /* SFSwiftNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSwiftNotificationTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC2601AA1972D15200301002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2601BC1972D15300301002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC2601A41972D15200301002 = {
+			isa = PBXGroup;
+			children = (
+				FC2601AF1972D15200301002 /* SFSwiftNotification */,
+				FC2601C21972D15300301002 /* SFSwiftNotificationTests */,
+				FC2601AE1972D15200301002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC2601AE1972D15200301002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC2601AD1972D15200301002 /* SFSwiftNotification.app */,
+				FC2601BF1972D15300301002 /* SFSwiftNotificationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC2601AF1972D15200301002 /* SFSwiftNotification */ = {
+			isa = PBXGroup;
+			children = (
+				FC2601B21972D15200301002 /* AppDelegate.swift */,
+				FC2601B41972D15200301002 /* ViewController.swift */,
+				FC2601B61972D15200301002 /* Main.storyboard */,
+				FC2601B91972D15200301002 /* Images.xcassets */,
+				FC2601B01972D15200301002 /* Supporting Files */,
+			);
+			path = SFSwiftNotification;
+			sourceTree = "<group>";
+		};
+		FC2601B01972D15200301002 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC2601B11972D15200301002 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC2601C21972D15300301002 /* SFSwiftNotificationTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC2601C51972D15300301002 /* SFSwiftNotificationTests.swift */,
+				FC2601C31972D15300301002 /* Supporting Files */,
+			);
+			path = SFSwiftNotificationTests;
+			sourceTree = "<group>";
+		};
+		FC2601C31972D15300301002 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC2601C41972D15300301002 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC2601AC1972D15200301002 /* SFSwiftNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2601C91972D15300301002 /* Build configuration list for PBXNativeTarget "SFSwiftNotification" */;
+			buildPhases = (
+				FC2601A91972D15200301002 /* Sources */,
+				FC2601AA1972D15200301002 /* Frameworks */,
+				FC2601AB1972D15200301002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFSwiftNotification;
+			productName = SFSwiftNotification;
+			productReference = FC2601AD1972D15200301002 /* SFSwiftNotification.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC2601BE1972D15300301002 /* SFSwiftNotificationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2601CC1972D15300301002 /* Build configuration list for PBXNativeTarget "SFSwiftNotificationTests" */;
+			buildPhases = (
+				FC2601BB1972D15300301002 /* Sources */,
+				FC2601BC1972D15300301002 /* Frameworks */,
+				FC2601BD1972D15300301002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC2601C11972D15300301002 /* PBXTargetDependency */,
+			);
+			name = SFSwiftNotificationTests;
+			productName = SFSwiftNotificationTests;
+			productReference = FC2601BF1972D15300301002 /* SFSwiftNotificationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC2601A51972D15200301002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = sferrini;
+				TargetAttributes = {
+					FC2601AC1972D15200301002 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					FC2601BE1972D15300301002 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = FC2601AC1972D15200301002;
+					};
+				};
+			};
+			buildConfigurationList = FC2601A81972D15200301002 /* Build configuration list for PBXProject "SFSwiftNotification" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC2601A41972D15200301002;
+			productRefGroup = FC2601AE1972D15200301002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC2601AC1972D15200301002 /* SFSwiftNotification */,
+				FC2601BE1972D15300301002 /* SFSwiftNotificationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC2601AB1972D15200301002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2601B81972D15200301002 /* Main.storyboard in Resources */,
+				FC2601BA1972D15200301002 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2601BD1972D15300301002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC2601A91972D15200301002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2601B51972D15200301002 /* ViewController.swift in Sources */,
+				FC2601B31972D15200301002 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2601BB1972D15300301002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2601C61972D15300301002 /* SFSwiftNotificationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC2601C11972D15300301002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC2601AC1972D15200301002 /* SFSwiftNotification */;
+			targetProxy = FC2601C01972D15300301002 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC2601B61972D15200301002 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2601B71972D15200301002 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC2601C71972D15300301002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC2601C81972D15300301002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC2601CA1972D15300301002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SFSwiftNotification/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC2601CB1972D15300301002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SFSwiftNotification/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC2601CD1972D15300301002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SFSwiftNotification.app/SFSwiftNotification";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SFSwiftNotificationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		FC2601CE1972D15300301002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SFSwiftNotification.app/SFSwiftNotification";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SFSwiftNotificationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC2601A81972D15200301002 /* Build configuration list for PBXProject "SFSwiftNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2601C71972D15300301002 /* Debug */,
+				FC2601C81972D15300301002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2601C91972D15300301002 /* Build configuration list for PBXNativeTarget "SFSwiftNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2601CA1972D15300301002 /* Debug */,
+				FC2601CB1972D15300301002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC2601CC1972D15300301002 /* Build configuration list for PBXNativeTarget "SFSwiftNotificationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2601CD1972D15300301002 /* Debug */,
+				FC2601CE1972D15300301002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC2601A51972D15200301002 /* Project object */;
+}
