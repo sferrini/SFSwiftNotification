@@ -29,10 +29,11 @@ In your ViewController
 In ```viewDidLoad()```
 
 ```swift
-    notifyView = SFSwiftNotification(frame: frame,
-                                     title: nil,
-                                 direction: Direction.LeftToRight,
-                                  delegate: self)
+    notifyView = SFSwiftNotification(frame: notifyFrame,
+                                         title: nil,
+                                 animationType: AnimationType.AnimationTypeCollision,
+                                     direction: Direction.LeftToRight,
+                                      delegate: self)
     notifyView!.backgroundColor = UIColor.orangeColor()
     notifyView!.label.textColor = UIColor.whiteColor()
     notifyView!.label.text = "This is an SFSwiftNotification"
@@ -44,8 +45,26 @@ To start the notification:
 ```swift
     @IBAction func notify(sender : AnyObject) {
         
-        self.notifyView!.animate(newFrame, delay: 1)
+        self.notifyView!.animate(notifyFrame, delay: 1)
     }
+```
+
+Settings
+--------------------
+
+AnimationTypes:
+
+```swift
+    AnimationTypeCollision
+    AnimationTypeBounce
+```
+
+Direction:
+
+```swift
+    TopToBottom
+    LeftToRight
+    RightToLeft
 ```
 
 Screen
