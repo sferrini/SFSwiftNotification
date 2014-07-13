@@ -8,20 +8,79 @@
 
 import UIKit
 
+struct Animation {
+    var duration:NSTimeInterval = 0.5
+    var delay:NSTimeInterval = 0
+    var damping:CGFloat = 0.4
+    var velocity:CGFloat = 0.3
+}
+
+protocol SFSwiftNotificationProtocol {
+    func didNotifyFinishedAnimation(results: Bool)
+}
+
 class SFSwiftNotification: UIView {
-
-    init(frame: CGRect) {
+    
+    var label = UILabel()
+    var delegate: SFSwiftNotificationProtocol?
+    var animation = Animation()
+    var canNotify = true
+    
+    init(frame: CGRect, title: NSString?, delegate: SFSwiftNotificationProtocol?) {
         super.init(frame: frame)
-        // Initialization code
+        
+        self.delegate = delegate
+        
+        label = UILabel(frame: self.frame)
+        label.text = title
+        label.textAlignment = NSTextAlignment.Center
+        self.addSubview(label)
+        
+        offScreen()
     }
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect)
-    {
-        // Drawing code
+    
+    func offScreen() {
+        
+        var offScreenFrame = self.frame
+        offScreenFrame.origin.y = -self.frame.size.height
+        self.frame = offScreenFrame
     }
-    */
-
+    
+    func animate(toFrame:CGRect, delay:NSTimeInterval) {
+        
+        if canNotify {
+            self.canNotify = false
+            UIView.animateWithDuration(animation.duration,
+                delay: animation.delay,
+                usingSpringWithDamping: animation.damping,
+                initialSpringVelocity: animation.velocity,
+                options: (.BeginFromCurrentState | .AllowUserInteraction),
+                animations:{
+                    self.frame = toFrame
+                }, completion: {
+                    (value: Bool) in
+                    self.hide(toFrame, delay: delay)
+                }
+            )
+        }
+    }
+    
+    func hide(toFrame:CGRect, delay:NSTimeInterval) {
+        
+        UIView.animateWithDuration(animation.duration,
+            delay: delay,
+            usingSpringWithDamping: animation.damping,
+            initialSpringVelocity: animation.velocity,
+            options: (.BeginFromCurrentState | .AllowUserInteraction),
+            animations:{
+                var hideFrame = toFrame
+                hideFrame.origin.y = toFrame.origin.y-self.frame.size.height
+                self.frame = hideFrame
+            }, completion: {
+                (value: Bool) in
+                self.delegate!.didNotifyFinishedAnimation(true)
+                self.canNotify = true
+            }
+        )
+    }
 }
