@@ -29,6 +29,7 @@ enum Direction {
 
 protocol SFSwiftNotificationProtocol {
     func didNotifyFinishedAnimation(results: Bool)
+    func didTapNotification()
 }
 
 class SFSwiftNotification: UIView, UICollisionBehaviorDelegate, UIDynamicAnimatorDelegate {
@@ -44,6 +45,10 @@ class SFSwiftNotification: UIView, UICollisionBehaviorDelegate, UIDynamicAnimato
     var toFrame = CGRect()
     var delay = NSTimeInterval()
     
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     init(frame: CGRect, title: NSString?, animationType:AnimationType, direction:Direction, delegate: SFSwiftNotificationProtocol?) {
         super.init(frame: frame)
         
@@ -56,7 +61,20 @@ class SFSwiftNotification: UIView, UICollisionBehaviorDelegate, UIDynamicAnimato
         label.textAlignment = NSTextAlignment.Center
         self.addSubview(label)
         
+        // Create gesture recognizer to detect notification touches
+        var tapReconizer = UITapGestureRecognizer()
+        tapReconizer.addTarget(self, action: "invokeTapAction");
+        
+        // Add Touch recognizer to notification view
+        self.addGestureRecognizer(tapReconizer)
+        
         offScreen()
+    }
+    
+    func invokeTapAction() {
+        
+        self.delegate!.didTapNotification()
+        self.canNotify = true
     }
     
     func offScreen() {
@@ -95,7 +113,7 @@ class SFSwiftNotification: UIView, UICollisionBehaviorDelegate, UIDynamicAnimato
     
     func setupCollisionAnimation(toFrame:CGRect) {
         
-        self.dynamicAnimator = UIDynamicAnimator(referenceView: self.superview)
+        self.dynamicAnimator = UIDynamicAnimator(referenceView: self.superview!)
         self.dynamicAnimator.delegate = self
         
         let elasticityBehavior = UIDynamicItemBehavior(items: [self])
