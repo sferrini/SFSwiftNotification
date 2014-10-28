@@ -26,7 +26,7 @@ class ViewController: UIViewController, SFSwiftNotificationProtocol {
         notifyView!.backgroundColor = UIColor.orangeColor()
         notifyView!.label.textColor = UIColor.whiteColor()
         notifyView!.label.text = "This is an SFSwiftNotification"
-        self.view.addSubview(notifyView)
+        self.view.addSubview(notifyView!)
     }
     
     @IBAction func notify(sender : AnyObject) {
@@ -37,6 +37,15 @@ class ViewController: UIViewController, SFSwiftNotificationProtocol {
     func didNotifyFinishedAnimation(results: Bool) {
         
         println("SFSwiftNotification finished animation")
+    }
+    
+    func didTapNotification() {
+        
+        let tapAlert = UIAlertController(title: "SFSwiftNotification",
+            message: "You just tapped the notificatoion",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        tapAlert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+        self.presentViewController(tapAlert, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

@@ -73,3 +73,5 @@ Screen
 ![Demo DEFAULT](https://raw.github.com/sferrini/SFSwiftNotification/master/Gif/SFSwiftNotificationBlue.gif)
 
 ![Demo DEFAULT](https://raw.github.com/sferrini/SFSwiftNotification/master/Gif/SFSwiftNotification.gif)
+
+![Demo DEFAULT](https://raw.github.com/oduwa/SFSwiftNotification/master/Gif/SFSwiftNotificationTap.gif)
