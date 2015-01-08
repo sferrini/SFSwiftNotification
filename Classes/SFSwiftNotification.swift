@@ -133,10 +133,10 @@ class SFSwiftNotification: UIView, UICollisionBehaviorDelegate, UIDynamicAnimato
         case .TopToBottom:
             break
         case .LeftToRight:
-            collisionBehavior.addBoundaryWithIdentifier("BoundaryIdentifierRight", fromPoint: CGPointMake(self.toFrame.width+0.5, 0), toPoint: CGPointMake(self.toFrame.width+0.5, self.toFrame.height))
+            collisionBehavior.addBoundaryWithIdentifier("BoundaryIdentifierRight", fromPoint: CGPointMake(self.toFrame.width-0.5, 0), toPoint: CGPointMake(self.toFrame.width-0.5, self.toFrame.height))
             gravityBehavior.gravityDirection = CGVectorMake(10, 1)
         case .RightToLeft:
-            collisionBehavior.addBoundaryWithIdentifier("BoundaryIdentifierLeft", fromPoint: CGPointMake(-0.5, 0), toPoint: CGPointMake(-0.5, self.toFrame.height))
+            collisionBehavior.addBoundaryWithIdentifier("BoundaryIdentifierLeft", fromPoint: CGPointMake(+0.5, 0), toPoint: CGPointMake(+0.5, self.toFrame.height))
             gravityBehavior.gravityDirection = CGVectorMake(-10, 1)
         }
     }
