@@ -49,7 +49,7 @@ class SFSwiftNotification: UIView, UICollisionBehaviorDelegate, UIDynamicAnimato
         super.init(coder: aDecoder)
     }
     
-    init(frame: CGRect, title: NSString?, animationType:AnimationType, direction:Direction, delegate: SFSwiftNotificationProtocol?) {
+    init(frame: CGRect, title: String?, animationType:AnimationType, direction:Direction, delegate: SFSwiftNotificationProtocol?) {
         super.init(frame: frame)
         
         self.animationType = animationType
@@ -157,7 +157,7 @@ class SFSwiftNotification: UIView, UICollisionBehaviorDelegate, UIDynamicAnimato
         )
     }
     
-    func dynamicAnimatorDidPause(animator: UIDynamicAnimator!) {
+    func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
         
         hide(self.toFrame, delay: self.delay)
     }
