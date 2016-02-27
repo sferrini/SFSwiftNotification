@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88E566011C81D9AD004B415F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E566001C81D9AD004B415F /* LaunchScreen.storyboard */; };
 		FC2601B31972D15200301002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2601B21972D15200301002 /* AppDelegate.swift */; };
 		FC2601B51972D15200301002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2601B41972D15200301002 /* ViewController.swift */; };
 		FC2601B81972D15200301002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2601B61972D15200301002 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88E566001C81D9AD004B415F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC2601AD1972D15200301002 /* SFSwiftNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSwiftNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2601B11972D15200301002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2601B21972D15200301002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				FC2601B21972D15200301002 /* AppDelegate.swift */,
 				FC2601B41972D15200301002 /* ViewController.swift */,
 				FC2601B61972D15200301002 /* Main.storyboard */,
+				88E566001C81D9AD004B415F /* LaunchScreen.storyboard */,
 				FC2601B91972D15200301002 /* Images.xcassets */,
 				FC2601B01972D15200301002 /* Supporting Files */,
 			);
@@ -200,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E566011C81D9AD004B415F /* LaunchScreen.storyboard in Resources */,
 				FC2601B81972D15200301002 /* Main.storyboard in Resources */,
 				FC2601BA1972D15200301002 /* Images.xcassets in Resources */,
 			);
@@ -409,6 +413,7 @@
 				FC2601CB1972D15300301002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC2601CC1972D15300301002 /* Build configuration list for PBXNativeTarget "SFSwiftNotificationTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				FC2601CE1972D15300301002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
