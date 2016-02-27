@@ -1,19 +1,14 @@
 SFSwiftNotification
 =============
 
-
 Simple custom user notifications
 
+(**DEPRECATED AND NO LONGER MAINTAINED.**)
 
 Install
 --------------------
 
-* Manually:
-Copy the file ```SFSwiftNotification.swift``` to your project.
-
-
-* CocoaPods: (Soon available)
-
+* Copy the file ```SFSwiftNotification.swift``` into your project.
 
 
 Usage
@@ -23,30 +18,31 @@ Usage
 In your ViewController
 
 ```swift
-	var notifyView:SFSwiftNotification?
+var notificationView: SFSwiftNotification?
 ```
 
 In ```viewDidLoad()```
 
 ```swift
-    notifyView = SFSwiftNotification(frame: notifyFrame,
-                                         title: nil,
-                                 animationType: AnimationType.AnimationTypeCollision,
-                                     direction: Direction.LeftToRight,
-                                      delegate: self)
-    notifyView!.backgroundColor = UIColor.orangeColor()
-    notifyView!.label.textColor = UIColor.whiteColor()
-    notifyView!.label.text = "This is an SFSwiftNotification"
-    self.view.addSubview(notifyView)
+notificationView = SFSwiftNotification(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 50),
+                                       title: "This is an SFSwiftNotification",
+                               animationType: .Collision,
+                                   direction: .RightToLeft,
+                                    delegate: self)
+    
+notificationView!.backgroundColor = UIColor.orangeColor()
+notificationView!.label.textColor = UIColor.whiteColor()
+    
+self.view.addSubview(notificationView!)
 ```
 
 To start the notification:
 
 ```swift
-    @IBAction func notify(sender : AnyObject) {
-        
-        self.notifyView!.animate(notifyFrame, delay: 1)
-    }
+@IBAction func notify(sender : AnyObject) {
+    
+    self.notificationView!.animate(1)
+}
 ```
 
 Settings
@@ -55,16 +51,16 @@ Settings
 AnimationTypes:
 
 ```swift
-    .AnimationTypeCollision
-    .AnimationTypeBounce
+.Collision
+.Bounce
 ```
 
 Directions:
 
 ```swift
-    .TopToBottom
-    .LeftToRight
-    .RightToLeft
+.TopToBottom
+.LeftToRight
+.RightToLeft
 ```
 
 Screen

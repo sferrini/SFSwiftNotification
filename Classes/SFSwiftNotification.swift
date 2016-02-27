@@ -9,8 +9,8 @@
 import UIKit
 
 enum AnimationType {
-    case AnimationTypeCollision
-    case AnimationTypeBounce
+    case Collision
+    case Bounce
 }
 
 enum AnimationDirection {
@@ -47,10 +47,6 @@ class SFSwiftNotification: UIView {
     private var initialFrame = CGRect()
     private var delay = NSTimeInterval()
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     init(frame: CGRect, title: String?, animationType: AnimationType, direction: AnimationDirection, delegate: SFSwiftNotificationProtocol?) {
         super.init(frame: frame)
         
@@ -73,6 +69,10 @@ class SFSwiftNotification: UIView {
         
         offScreen()
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func animate(delay: NSTimeInterval) {
         
@@ -83,10 +83,10 @@ class SFSwiftNotification: UIView {
             self.canNotify = false
             
             switch self.animationType! {
-            case .AnimationTypeCollision:
+            case .Collision:
                 setupCollisionAnimation(self.initialFrame)
                 
-            case .AnimationTypeBounce:
+            case .Bounce:
                 setupBounceAnimation(self.initialFrame, delay: delay)
             }
         }

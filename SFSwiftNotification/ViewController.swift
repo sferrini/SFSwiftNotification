@@ -17,8 +17,8 @@ class ViewController: UIViewController, SFSwiftNotificationProtocol {
         
         notificationView = SFSwiftNotification(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 50),
                                                title: "This is an SFSwiftNotification",
-                                       animationType: .AnimationTypeBounce,
-                                           direction: .RightToLeft,
+                                       animationType: .Collision,
+                                           direction: .TopToBottom,
                                             delegate: self)
         
         notificationView!.backgroundColor = UIColor.orangeColor()
