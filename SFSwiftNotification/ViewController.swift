@@ -36,7 +36,7 @@ class ViewController: UIViewController, SFSwiftNotificationProtocol {
     
     func didNotifyFinishedAnimation(results: Bool) {
         
-        println("SFSwiftNotification finished animation")
+        print("SFSwiftNotification finished animation")
     }
     
     func didTapNotification() {
